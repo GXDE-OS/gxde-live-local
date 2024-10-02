@@ -4,5 +4,8 @@
 
 ## 命令
 ```bash
-gxde-live-local GXDE ISO镜像路径
+gxde-live-local --help  # 查看帮助
+gxde-live-local set GXDE ISO 路径  # 从 ISO 提取 live 镜像
+gxde-live-local del  # 移除安装到本地的 live 镜像
+gxde-live-local check  # 检测是否已经安装到本地
 ```

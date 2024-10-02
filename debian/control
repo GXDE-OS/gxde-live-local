@@ -1,0 +1,42 @@
+Source: gxde-live-local
+Section: utils
+Priority: optional
+Maintainer: gfdgd_xi <3025613752@qq.com>
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.6.2
+Homepage: https://gitee.com/GXDE-OS/gxde-live-local
+
+Package: gxde-live-local
+Architecture: any
+Conflicts: 
+ live-filesystem, 
+ live-filesystem-community-full, 
+ live-filesystem-community-tiny, 
+ live-filesystem-community-full-15.11, 
+ live-filesystem-community-debian, 
+ live-filesystem-community-debian-mini, 
+ live-filesystem-community-debian-core
+Replaces: 
+ live-filesystem, 
+ live-filesystem-community-full, 
+ live-filesystem-community-tiny, 
+ live-filesystem-community-full-15.11, 
+ live-filesystem-community-debian, 
+ live-filesystem-community-debian-mini, 
+ live-filesystem-community-debian-core
+Provides: 
+ live-filesystem, 
+ live-filesystem-community-full, 
+ live-filesystem-community-tiny, 
+ live-filesystem-community-full-15.11, 
+ live-filesystem-community-debian, 
+ live-filesystem-community-debian-mini, 
+ live-filesystem-community-debian-core
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ grub-common,
+ python3
+Description: GXDE Live on local disk

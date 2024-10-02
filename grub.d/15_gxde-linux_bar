@@ -65,6 +65,9 @@ linux_entry ()
   echo "	insmod gzio" | sed "s/^/$submenu_indentation/"
   # 加入配置脚本
   echo "	init=/run/live/medium/usr/share/gxde-live-local/init.sh" | sed "s/^/$submenu_indentation/"
+  # 默认使用中文
+  echo "	locales=zh_CN.UTF-8" | sed "s/^/$submenu_indentation/"
+  
 
   if [ x$dirname = x/ ]; then
     if [ -z "${prepare_root_cache}" ]; then

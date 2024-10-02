@@ -77,6 +77,11 @@ def ShowHelp():
 def UpdateGrub():
     os.system("update-grub")
 
+def CheckISOErrorPrint():
+    print("No!")
+    print("暂不支持该 ISO 镜像")
+    exit(1)
+
 if (len(sys.argv) <= 1):
     print("参数不足")
     ShowHelp()
@@ -96,6 +101,24 @@ if (not os.path.exists(liveDiskInstallPath)):
     os.makedirs(liveDiskInstallPath)
 
 iso = LiveISO(sys.argv[1])
+# 检测文件是否齐全
+print("检测是否有 vmlinuz？  ", end="")
+if(iso.vmlinuzPath() == None):
+    CheckISOErrorPrint()
+else:
+    print("Yes")
+print("检测是否有 initrd？  ", end="")
+if(iso.initrdPath() == None):
+    CheckISOErrorPrint()
+else:
+    print("Yes")
+print("检测是否有 filesystm.squashfs？  ", end="")
+if(iso.filesystemPath() == None):
+    CheckISOErrorPrint()
+else:
+    print("Yes")
+
+
 print("提取 vmlinuz")
 iso.extractVmlinuz(f"{bootInstallPath}/vmlinuz-gxde")
 print("提取 initrd.img")

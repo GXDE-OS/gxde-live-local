@@ -30,7 +30,7 @@ export TEXTDOMAINDIR="${datarootdir}/locale"
 CLASS="--class gnu-linux --class gnu --class os"
 
 # 判断 /gxde-recovery-live/filesystem.squashfs 是否存在，不存在则直接忽略
-if [[ ! -d /gxde-recovery-live/filesystem.squashfs ]]; then
+if [[ ! -e /gxde-recovery-live/filesystem.squashfs ]]; then
   exit
 fi
 

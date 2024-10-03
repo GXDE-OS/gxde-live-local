@@ -97,13 +97,13 @@ if ("--help" in sys.argv):
     ShowHelp()
     exit()
 
-# 权限检测
-RootChecked()
-
 bootInstallPath = "/boot/gxde/"
 liveDiskInstallPath = "/gxde-recovery-live/"
 
 if (sys.argv[1] == "set"):
+    # 权限检测
+    RootChecked()
+
     livePath = sys.argv[2]
     # 新建所需文件夹（如果不存在）
     if (not os.path.exists(bootInstallPath)):
@@ -141,6 +141,9 @@ if (sys.argv[1] == "set"):
     print("完成！重启后即可在 grub 寻找入口")
 
 elif (sys.argv[1] == "del"):
+    # 权限检测
+    RootChecked()
+    
     if (not os.path.exists(f"{liveDiskInstallPath}/filesystem.squashfs")):
         print("未安装 live 镜像，不进行操作")
         exit(1)

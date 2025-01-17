@@ -118,7 +118,7 @@ done
 
 linux=`version_find_latest $list`
 
-gettext_printf "Found GXDE image: %s\n" "$linux" >&2
+gettext_printf "Found GXDE Live image: %s\n" "$linux" >&2
 basename=`basename $linux`
 dirname=`dirname $linux`
 rel_dirname=`make_system_path_relative_to_its_root $dirname`

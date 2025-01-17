@@ -1,6 +1,6 @@
-gxde-live-local (2.1.2) UNRELEASED; urgency=medium
+gxde-live-local (2.1.3) UNRELEASED; urgency=medium
 
   * 新增删除和检测安装
+  * 调整 update-grub 输出
 
-
- -- gfdgd_xi <3025613752@qq.com>  Thu, 03 Oct 2024 10:11:56 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Fri, 17 Jan 2025 17:57:18 +0800
